@@ -1,0 +1,185 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    /**Reset para Rems - 62.5% = 10px de 16 **/
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: #ffffff;
+    color: #514F59;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.7rem;
+}
+
+h1 {
+    font-size: 2.2rem;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+@media(min-width:800px) {
+    h1 {
+        font-size: 3.2rem;
+    }
+}
+
+header {
+    background-color: #5941A9;
+    padding: 1rem;
+    color: white;
+    position: relative;
+    z-index: 5;
+}
+
+button {
+    border: none;
+    padding: 1rem;
+    color: white;
+}
+
+.contenedor {
+    width: 90%;
+    margin: 0 auto;
+}
+
+@media(min-width:800px) {
+    .contenedor {
+        width: 72rem;
+        margin: 0 auto;
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: flex-start;
+}
+
+@media(min-width:800px) {
+    .header {
+        justify-content: center;
+    }
+}
+
+.titulo_resultado {
+    display: block;
+    text-align: center;
+    margin: 2rem 0 .5rem 0;
+}
+
+.resultado {
+    display: block;
+    width: 100%;
+    border: 1px solid rgb(223, 223, 223);
+    border-left: none;
+    border-right: none;
+    padding: .5rem;
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.contenido_pincipal {
+    display: flex;
+    flex-direction: column;
+}
+
+@media(min-width:800px) {
+    .contenido_pincipal {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+.formulario {
+    padding: 1rem 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+@media(min-width:800px) {
+    form {
+        align-items: center;
+    }
+}
+
+fieldset {
+    border: none;
+}
+
+legend {
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.btn_contendor {
+    display: flex;
+    flex-direction: column;
+}
+
+@media(min-width:800px) {
+    .btn_contendor {
+        flex-direction: row;
+    }
+}
+
+.btn,
+.btn_contendor button {
+    margin: .5rem 0;
+    background-color: #5941A9;
+    border-radius: .5rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+@media(min-width:800px) {
+    .btn_contendor button {
+        width: 15rem;
+        margin-right: .5rem;
+    }
+    .btn_contendor button:last-of-type {
+        margin-right: 0;
+    }
+}
+
+.lista_salarios {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+table tr {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+
+td {
+    text-align: center;
+}
+
+.lista_salarios .btn {
+    font-size: 1.2rem;
+}

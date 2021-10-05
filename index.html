@@ -19,8 +19,53 @@
             <h1>Análisis Salarial</h1>
         </div>
     </header>
+    <main>
+        <span id="resultado" class="titulo_resultado">Resultado:</span>
+        <span class="resultado">-----</span>
+        <div class="contenido_pincipal contenedor">
+            <div>
+                <section>
+                    <div class="formulario ">
+                        <form>
+                            <fieldset>
+                                <div class="input">
+                                    <label for="add_salario">Agrega un salario</label>
+                                    <input type="number" min="1" id="add_salario">
+                                </div>
+                            </fieldset>
+                            <button class="btn" data-boton="agregar">Agregar</button>
+                        </form>
+                    </div>
+                </section>
+            </div>
+            <div>
+                <section>
+                    <h2>Lista de salarios</h2>
 
+                    <div class="lista_salarios ">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>salario</th>
+                                    <th colspan="2">&nbsp;</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1. -</td>
+                                    <td>8000</td>
+                                    <td><button class="btn">Eliminar</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
     <script src="js/salarios.js"></script>
+    <script src="js/analisis.js"></script>
     <script src="js/app.js"></script>
 </body>
 
