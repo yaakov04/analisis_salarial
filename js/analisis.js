@@ -18,7 +18,7 @@ const calcularMediana = (lista) => {
 
 const tenerTop10 = lista => {
     console.log(lista)
-    const spliceStart = (lista.length * 90) / 100;
+    const spliceStart = parseInt((lista.length * 90) / 100);
     const spliceCount = lista.length - spliceStart;
     salariosTop = lista.splice(spliceStart, spliceCount);
     console.log(salariosTop);
