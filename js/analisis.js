@@ -1,9 +1,3 @@
-//obteniendo solo los salarios
-//const salariosMx = mexico.map(persona => persona.salary);
-
-//ordenando los salarios
-//const salariosMxSorted = salariosMx.sort((salaryA, salaryB) => salaryA - salaryB);
-
 const esPar = num => num % 2 === 0;
 
 const calcularPromedio = lista => {
@@ -22,25 +16,11 @@ const calcularMediana = (lista) => {
     }
 }
 
-//mediana general
-//const medianaGeneralMx = calcularMediana(salariosMxSorted);
-
-//obteniendo el top 10%
-/*const spliceStart = (salariosMxSorted.length * 90) / 100;
-const spliceCount = salariosMxSorted.length - spliceStart;
-const salariosMxTop10 = salariosMxSorted.splice(spliceStart, spliceCount);*/
-
 const tenerTop10 = lista => {
-    const spliceStart = (lista.length * 90) / 100,
-        spliceCount = lista.length - spliceStart,
-        salarioTop10 = lista.splice(spliceStart, spliceCount);
-    return salarioTop10;
+    console.log(lista)
+    const spliceStart = (lista.length * 90) / 100;
+    const spliceCount = lista.length - spliceStart;
+    salariosTop = lista.splice(spliceStart, spliceCount);
+    console.log(salariosTop);
+    return salariosTop;
 }
-
-//mediana top 10%
-//const medianaTop10Mx = calcularMediana(salariosMxTop10);
-
-/*console.log({
-    medianaGeneralMx,
-    medianaTop10Mx
-})*/

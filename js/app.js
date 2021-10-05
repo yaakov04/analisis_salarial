@@ -1,6 +1,8 @@
 const lista = document.querySelector('.lista_salarios tbody'),
     btnAgregar = document.querySelector('#btn_agregar'),
-    btnEliminarTodo = document.querySelector('#eliminar_todo');
+    btnEliminarTodo = document.querySelector('#eliminar_todo'),
+    contenedorBtn = document.querySelector('.btn_contendor'),
+    resultado = document.querySelector('.resultado');
 
 //comprueba si la lista esta vacia
 const listaVacia = lista => lista.children.length === 0;
@@ -63,3 +65,50 @@ const eliminarElemento = (e) => {
 btnAgregar.addEventListener('click', agregarElementoLista);
 btnEliminarTodo.addEventListener('click', eliminarTodo);
 lista.addEventListener('click', eliminarElemento);
+
+const listaSalarios = () => {
+    const salarios = [];
+    const list = lista.children;
+    for (let i = 0; i < list.length; i++) {
+        const salario = parseFloat(list[i].children[0].innerHTML);
+        salarios.push(salario)
+    }
+    salarios.sort((salaryA, salaryB) => salaryA - salaryB);
+    return salarios;
+}
+
+const calcular = (btn, salarios) => {
+    let resultado;
+    switch (btn.getAttribute('data-tipo')) {
+        case 'mediana_general':
+            resultado = calcularMediana(salarios);
+            return `
+                La mediana general es: ${resultado}
+            `;
+            break;
+        case 'mediana_top10':
+            resultado = calcularMediana(tenerTop10(salarios));
+            return `
+                La mediana del top 10 es: ${resultado}
+            `;
+            break;
+        default:
+            break;
+    }
+
+};
+
+const calculo = (btn, salarios) => {
+    const calculo = calcular(btn, salarios);
+    resultado.innerHTML = calculo;
+};
+
+contenedorBtn.addEventListener('click', (e) => {
+    if (e.target.getAttribute('data-btn') === 'calcular' && !listaVacia(lista)) {
+        const btn = e.target;
+        calculo(btn, listaSalarios())
+    }
+    if (listaVacia(lista)) {
+        alert('La lista no puede estar vacia')
+    }
+});
