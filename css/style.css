@@ -172,7 +172,7 @@ legend {
 
 table tr {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
 }
 
@@ -182,4 +182,8 @@ td {
 
 .lista_salarios .btn {
     font-size: 1.2rem;
+}
+
+.btn-red {
+    background-color: rgb(197, 36, 36);
 }
